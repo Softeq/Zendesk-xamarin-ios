@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{D130B9FC-2060-400F-A317-666D6780005A}</ProjectGuid>
+    <TemplateGuid>{b6f3ff35-79b2-4f25-a2fc-60a7cf61013b}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MessagingSDK.Bindings</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>MessagingSDK.Bindings</AssemblyName>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="Structs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Info.plist" />
+    <BundleResource Include="Resources\de.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\he.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ar.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\el.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\zh-Hans.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ja.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\en.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\nb.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\en-GB.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\es.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\da.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\it.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\bg.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ms.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\sv.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\cs.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ko.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\fil.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\zh-Hant.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\hu.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\tr.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\pl.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\Headers\MessagingSDK.h" />
+    <BundleResource Include="Resources\Headers\MessagingSDK-Swift.h" />
+    <BundleResource Include="Resources\pt-BR.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\vi.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ru.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\fr.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\fi.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\id.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\nl.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\th.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\pt.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\Modules\module.modulemap" />
+    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\arm64-apple-ios.swiftinterface" />
+    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\arm64-apple-ios.swiftdoc" />
+    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\armv7.swiftinterface" />
+    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\arm64.swiftinterface" />
+    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\armv7-apple-ios.swiftinterface" />
+    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\arm.swiftdoc" />
+    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\armv7.swiftdoc" />
+    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\arm64.swiftdoc" />
+    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\armv7-apple-ios.swiftdoc" />
+    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\arm.swiftinterface" />
+    <BundleResource Include="Resources\ro.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\hi.lproj\Localizable.strings" />
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="MessagingSDK.framework">
+      <Kind>Framework</Kind>
+      <Frameworks>Foundation</Frameworks>
+    </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonUISDK.Bindings\CommonUISDK.Bindings.csproj">
+      <Project>{516bef0b-0272-4f85-9d4c-e9edcb2a490c}</Project>
+      <Name>CommonUISDK.Bindings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MessagingAPI.Bindings\MessagingAPI.Bindings.csproj">
+      <Project>{5cc82010-bda0-4bd1-8c61-ab36d213efb2}</Project>
+      <Name>MessagingAPI.Bindings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SDKConfigurations.Bindings\SDKConfigurations.Bindings.csproj">
+      <Project>{92F289E4-78E9-4B46-AFA6-8E8DC7F675B8}</Project>
+      <Name>SDKConfigurations.Bindings</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+</Project>
