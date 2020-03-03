@@ -211,7 +211,7 @@ namespace SupportSDK.Bindings
 		// +(UIViewController * _Nonnull)buildHelpCenterOverviewUiWithConfigs:(NSArray<id<ZDKConfiguration>> * _Nonnull)configs;
 		[Static]
 		[Export("buildHelpCenterOverviewUiWithConfigs:")]
-		UIViewController BuildHelpCenterOverviewUiWithConfigs(ZDKConfiguration[] configs);
+		UIViewController BuildHelpCenterOverviewUiWithConfigs(IZDKConfiguration[] configs);
 
 		// +(UIViewController<ZDKHelpCenterDelegate> * _Nonnull)buildHelpCenterOverviewWithConfigs:(NSArray<id<ZDKConfiguration>> * _Nonnull)configs __attribute__((deprecated("use buildHelpCenterOverviewUiWithConfigs instead")));
 		[Static]
