@@ -35,9 +35,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,42 +68,6 @@
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\Info.plist" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\de.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\he.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\ar.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\el.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\zh-Hans.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\ja.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\en.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\nb.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\en-GB.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\es.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\da.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\it.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\bg.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\ms.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\sv.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\cs.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\ko.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\fil.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\zh-Hant.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\hu.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\tr.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\pl.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\pt-BR.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\vi.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\ru.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\fr.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\fi.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\id.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\nl.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\th.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\pt.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\ro.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\SupportSDKStrings.bundle\hi.lproj\Localizable.strings" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonUISDK.Bindings\CommonUISDK.Bindings.csproj">

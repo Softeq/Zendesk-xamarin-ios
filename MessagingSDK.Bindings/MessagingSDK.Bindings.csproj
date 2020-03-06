@@ -35,9 +35,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -45,55 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingCoreSource Include="Structs.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Info.plist" />
-    <BundleResource Include="Resources\de.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\he.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\ar.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\el.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\zh-Hans.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\ja.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\en.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\nb.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\en-GB.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\es.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\da.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\it.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\bg.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\ms.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\sv.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\cs.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\ko.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\fil.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\zh-Hant.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\hu.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\tr.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\pl.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\Headers\MessagingSDK.h" />
-    <BundleResource Include="Resources\Headers\MessagingSDK-Swift.h" />
-    <BundleResource Include="Resources\pt-BR.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\vi.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\ru.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\fr.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\fi.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\id.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\nl.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\th.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\pt.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\Modules\module.modulemap" />
-    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\arm64-apple-ios.swiftinterface" />
-    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\arm64-apple-ios.swiftdoc" />
-    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\armv7.swiftinterface" />
-    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\arm64.swiftinterface" />
-    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\armv7-apple-ios.swiftinterface" />
-    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\arm.swiftdoc" />
-    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\armv7.swiftdoc" />
-    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\arm64.swiftdoc" />
-    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\armv7-apple-ios.swiftdoc" />
-    <BundleResource Include="Resources\Modules\MessagingSDK.swiftmodule\arm.swiftinterface" />
-    <BundleResource Include="Resources\ro.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\hi.lproj\Localizable.strings" />
   </ItemGroup>
   <ItemGroup>
     <NativeReference Include="MessagingSDK.framework">

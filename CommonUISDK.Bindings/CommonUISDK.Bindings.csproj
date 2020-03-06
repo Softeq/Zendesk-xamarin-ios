@@ -35,9 +35,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,42 +48,6 @@
       <Kind>Framework</Kind>
       <Frameworks>Foundation</Frameworks>
     </NativeReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\CommonUIStrings.bundle\Info.plist" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\de.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\he.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\ar.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\el.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\zh-Hans.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\ja.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\en.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\nb.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\en-GB.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\es.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\da.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\it.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\bg.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\ms.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\sv.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\cs.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\ko.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\fil.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\zh-Hant.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\hu.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\tr.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\pl.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\pt-BR.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\vi.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\ru.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\fr.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\fi.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\id.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\nl.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\th.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\pt.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\ro.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\CommonUIStrings.bundle\hi.lproj\Localizable.strings" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SDKConfigurations.Bindings\SDKConfigurations.Bindings.csproj">
