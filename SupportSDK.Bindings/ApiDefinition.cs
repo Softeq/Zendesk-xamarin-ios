@@ -718,7 +718,7 @@ namespace SupportSDK.Bindings
 		// +(UIViewController * _Nonnull)buildRequestListWith:(NSArray<id<ZDKConfiguration>> * _Nonnull)configurations __attribute__((warn_unused_result));
 		[Static]
 		[Export("buildRequestListWith:")]
-		UIViewController BuildRequestListWith(ZDKConfiguration[] configurations);
+		UIViewController BuildRequestListWith(IZDKConfiguration[] configurations);
 
 		// +(UIViewController * _Nonnull)buildRequestUi __attribute__((warn_unused_result));
 		[Static]
