@@ -19,8 +19,8 @@ namespace Zendesk
         [Export("application:didFinishLaunchingWithOptions:")]
         public bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            ZDKZendesk.InitializeWithAppId("***REMOVED***", "***REMOVED***", "***REMOVED***");
-            ZDKZendesk.Instance.SetIdentity(new ZDKObjCAnonymous("***REMOVED***", "***REMOVED***"));
+            ZDKZendesk.InitializeWithAppId("", "", "");
+            ZDKZendesk.Instance.SetIdentity(new ZDKObjCAnonymous("", ""));
             ZDKSupportUI.InitializeWithZendesk(ZDKZendesk.Instance);
 
 
