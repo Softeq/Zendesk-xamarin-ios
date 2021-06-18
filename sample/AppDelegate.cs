@@ -2,31 +2,36 @@
 using UIKit;
 using ZendeskCoreSDK.Bindings;
 using SupportSDK.Bindings;
-using System;
-using System.Diagnostics;
 
-namespace Zendesk
+namespace SampleApp
 {
-    // The UIApplicationDelegate for the application. This class is responsible for launching the
-    // User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
     [Register("AppDelegate")]
     public class AppDelegate : UIResponder, IUIApplicationDelegate
     {
-
         [Export("window")]
         public UIWindow Window { get; set; }
 
         [Export("application:didFinishLaunchingWithOptions:")]
         public bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            ZDKZendesk.InitializeWithAppId("", "", "");
-            ZDKZendesk.Instance.SetIdentity(new ZDKObjCAnonymous("", ""));
-            ZDKSupportUI.InitializeWithZendesk(ZDKZendesk.Instance);
-
+            InitZendesk();
 
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
             return true;
+        }
+
+        private void InitZendesk()
+        {
+            // TODO: Add valid credentials:
+            ZDKZendesk.InitializeWithAppId(
+                appId: "",
+                clientId: "",
+                zendeskUrl: "");
+            ZDKZendesk.Instance.SetIdentity(new ZDKObjCAnonymous(
+                name: "",
+                email: ""));
+            ZDKSupportUI.InitializeWithZendesk(ZDKZendesk.Instance);
         }
 
         // UISceneSession Lifecycle

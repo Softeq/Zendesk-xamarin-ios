@@ -3,7 +3,7 @@ using SupportSDK.Bindings;
 using System;
 using UIKit;
 
-namespace Zendesk
+namespace SampleApp
 {
     public partial class ViewController : UIViewController
     {
