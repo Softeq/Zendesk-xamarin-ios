@@ -1,0 +1,22 @@
+parameters: # defaults for any parameters that aren't specified
+  ProjectName: ''
+  PackageName: ''
+
+jobs:
+- job: macOS
+  pool:
+    vmImage: $(MACOS_VM_IMAGE)
+  steps:
+  - bash: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(MONO_VERSION)
+    displayName: Switch to the latest Xamarin SDK
+  - script: 'msbuild ${{ parameters.ProjectName }}/${{ parameters.ProjectName }}.csproj -t:rebuild /p:Configuration=$(BuildConfiguration)'
+    displayName: Build library
+  - script: 'nuget pack nuget/${{ parameters.PackageName }}.nuspec'
+    displayName: Pack library
+  - task: CopyFiles@2
+    inputs:
+      contents: '${{ parameters.PackageName }}*.nupkg'
+      targetFolder: $(Build.ArtifactStagingDirectory)
+  - task: PublishBuildArtifacts@1
+    inputs:
+      ArtifactName: 'drop'

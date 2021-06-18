@@ -1,0 +1,12 @@
+resources:
+- repo: self
+trigger: none
+
+variables:
+- template: templates/vars.yml
+
+jobs:
+- template: templates/nuget-steps.yml
+  parameters:
+    ProjectName: 'SDKConfigurations.Bindings'
+    PackageName: 'Softeq.ZendeskSDKConfigurationsSDK.iOS'
