@@ -1,0 +1,5 @@
+variables:
+  MONO_VERSION: 6_12_7
+  XCODE_VERSION: 12.4
+  BuildConfiguration: 'Release'
+  MACOS_VM_IMAGE: 'macOS-latest'

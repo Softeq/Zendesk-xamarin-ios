@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Softeq.ZendeskMessagingAPISDK.iOS</id>
+        <version>3.8.0</version>
+        <authors>Softeq Development Corp.</authors>
+        <owners>Softeq Development Corp.</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <title>ZendeskMessagingAPISDK</title>
+        <summary>Xamarin.iOS binding library for Zendesk MessagingAPI SDK</summary>
+        <description>Zendesk MessagingAPI SDK for Xamarin.iOS. The MessagingAPI SDK is a shared library among the Zendesk product SDKs. It is used to share the Messaging UI components among our product SDKs.</description>
+        <releaseNotes>New release</releaseNotes>
+        <iconUrl>https://avatars.githubusercontent.com/u/11525</iconUrl>
+        <licenseUrl>https://github.com/Softeq/Zendesk-xamarin-ios/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/Softeq/Zendesk-xamarin-ios</projectUrl>
+        <copyright>Copyright 2021 Softeq Development Corp.</copyright>
+        <tags>zendesk, xamarin.ios, softeq, ios, messaging</tags>
+        <dependencies>
+            <!-- Podspec: https://github.com/CocoaPods/Specs/blob/master/Specs/2/d/5/ZendeskMessagingAPISDK/3.8.0/ZendeskMessagingAPISDK.podspec.json#L26-L28 -->
+            <group targetFramework="Xamarin.iOS10">
+                <dependency id="Softeq.ZendeskSDKConfigurationsSDK.iOS" version="1.1.6" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="../MessagingAPI.Bindings/bin/Release/MessagingAPI.Bindings.dll" target="lib/Xamarin.iOS10/MessagingAPI.Bindings.dll" />
+    </files>
+</package>

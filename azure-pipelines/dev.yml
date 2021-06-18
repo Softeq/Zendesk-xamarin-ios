@@ -1,0 +1,24 @@
+resources:
+- repo: self
+trigger:
+  branches:
+    include:
+      - '*'
+  paths:
+    exclude:
+      - '**/*.md'
+
+jobs:
+- job: macOS
+  pool:
+    vmImage: 'macOS-latest'
+
+  steps:
+  - task: XamariniOS@2
+    displayName: 'Build Xamarin.iOS solution **/*.sln'
+    inputs:
+      solutionFile: '../**/*.sln'
+      configuration: 'Debug'
+      packageApp: false
+      buildForSimulator: true
+      runNugetRestore: true
