@@ -8,12 +8,17 @@ trigger:
     exclude:
       - '**/*.md'
 
+variables:
+- template: templates/vars.yml
+
 jobs:
 - job: macOS
   pool:
-    vmImage: 'macOS-latest'
+    vmImage: $(MACOS_VM_IMAGE)
 
   steps:
+  - bash: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(MONO_VERSION)
+    displayName: 'Switch to the latest Xamarin SDK'
   - task: XamariniOS@2
     displayName: 'Build Xamarin.iOS solution **/*.sln'
     inputs:

@@ -1,0 +1,55 @@
+resources:
+- repo: self
+trigger: none
+
+variables:
+- template: templates/vars.yml
+
+parameters:
+  - name: selectedPackage
+    displayName: 'Package for publish (projectName -> packageName)'
+    type: string
+    default: 'none'
+    values:
+      - 'none'
+      - 'ZendeskCoreSDK.Bindings -> Softeq.ZendeskCoreSDK.iOS'
+      - 'SDKConfigurations.Bindings -> Softeq.ZendeskSDKConfigurationsSDK.iOS'
+      - 'CommonUISDK.Bindings -> Softeq.ZendeskCommonUISDK.iOS'
+      - 'MessagingAPI.Bindings -> Softeq.ZendeskMessagingAPISDK.iOS'
+      - 'MessagingSDK.Bindings -> Softeq.ZendeskMessagingSDK.iOS'
+      - 'SupportProvidersSDK.Bindings -> Softeq.ZendeskSupportProvidersSDK.iOS'
+      - 'SupportSDK.Bindings -> Softeq.ZendeskSupportSDK.iOS'
+
+jobs:
+- job: macOS
+  pool:
+    vmImage: $(MACOS_VM_IMAGE)
+  steps:
+  - bash: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(MONO_VERSION)
+    displayName: Switch to the latest Xamarin SDK
+  - bash: |
+      echo ${{ parameters.selectedPackage }}
+      IFS=' -> ' read -ra ARR <<< "${{ parameters.selectedPackage }}"; # split parameter value
+
+      PROJECT_NAME=${ARR[0]}
+      echo "Run for project: $PROJECT_NAME"
+      echo "##vso[task.setvariable variable=projectName]$PROJECT_NAME"
+
+      PACKAGE_NAME=${ARR[2]}
+      echo "Package for publish: $PACKAGE_NAME"
+      echo "##vso[task.setvariable variable=packageName]$PACKAGE_NAME"
+    displayName: 'Set build variables'
+
+  - script: 'nuget restore'
+    displayName: 'Restore packages'
+  - script: 'msbuild $(projectName)/$(projectName).csproj -t:rebuild /p:Configuration=$(BuildConfiguration)'
+    displayName: 'Build library'
+  - script: 'nuget pack nuget/$(packageName).nuspec'
+    displayName: 'Pack library'
+  - task: CopyFiles@2
+    inputs:
+      contents: '$(packageName)*.nupkg'
+      targetFolder: $(Build.ArtifactStagingDirectory)
+  - task: PublishBuildArtifacts@1
+    inputs:
+      ArtifactName: 'drop'
