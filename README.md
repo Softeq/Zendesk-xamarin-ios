@@ -1,6 +1,6 @@
 # Zendesk SDKs for Xamarin iOS
 
-[![Build Status](https://dev.azure.com/SofteqDevelopment/mapbox-xamarin/_apis/build/status/zendesk-xamarin-ios-dev?branchName=feature%2Fnugets)](https://dev.azure.com/SofteqDevelopment/mapbox-xamarin/_build/latest?definitionId=168&branchName=feature%2Fnugets)
+[![Build Status](https://dev.azure.com/SofteqDevelopment/Xamarin.Binding.Libraries/_apis/build/status/zendesk-ios-dev?branchName=master)](https://dev.azure.com/SofteqDevelopment/Xamarin.Binding.Libraries/_build/latest?definitionId=168&branchName=master)
 
 Xamarin binding libraries for Zendesk iOS SDKs:
 
@@ -32,6 +32,15 @@ Zendesk resources:
 
 - [iOS Documentation](https://developer.zendesk.com/documentation/zendesk-sdks/sdks/ios/getting_started/)
 - [Zendesk Support Providers SDK Demo](https://github.com/zendesk/ios_sdk_demo_apps/tree/master/SupportSDKSamples)
+
+## Development
+
+### NuGet
+
+1. Add `nuget/*.nuspec`
+2. Add configuration to `azure-pipelines/nuget.yml`
+3. Manually run pipeline for target project
+4. Update `README.md` table for new library/version
 
 ## About
 
