@@ -27987,20 +27987,20 @@ namespace ZendeskCoreSDK.Bindings
         IntPtr Constructor([NullAllowed] string name, [NullAllowed] string email);
     }
 
-    //	// @interface ZDKObjCJwt : NSObject <ZDKObjCIdentity>
-    //	[BaseType (typeof(NSObject), Name = "_TtC14ZendeskCoreSDK10ZDKObjCJwt")]
-    //	[DisableDefaultCtor]
-    //	interface ZDKObjCJwt : IZDKObjCIdentity
-    //	{
-    //		// @property (readonly, copy, nonatomic) NSString * _Nonnull token;
-    //		[Export ("token")]
-    //		string Token { get; }
+    // @interface ZDKObjCJwt : NSObject <ZDKObjCIdentity>
+    [BaseType(typeof(NSObject), Name = "_TtC14ZendeskCoreSDK10ZDKObjCJwt")]
+    [DisableDefaultCtor]
+    interface ZDKObjCJwt : ZDKObjCIdentity
+    {
+        // @property (readonly, copy, nonatomic) NSString * _Nonnull token;
+        [Export("token")]
+        string Token { get; }
 
-    //		// -(instancetype _Nonnull)initWithToken:(NSString * _Nonnull)token __attribute__((objc_designated_initializer));
-    //		[Export ("initWithToken:")]
-    //		[DesignatedInitializer]
-    //		IntPtr Constructor (string token);
-    //	}
+        // -(instancetype _Nonnull)initWithToken:(NSString * _Nonnull)token __attribute__((objc_designated_initializer));
+        [Export("initWithToken:")]
+        [DesignatedInitializer]
+        IntPtr Constructor(string token);
+    }
 
     //	// @interface ZDKPushProvider : NSObject
     //	[BaseType (typeof(NSObject), Name = "_TtC14ZendeskCoreSDK15ZDKPushProvider")]

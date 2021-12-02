@@ -31,6 +31,7 @@ namespace SampleApp
             ZDKZendesk.Instance.SetIdentity(new ZDKObjCAnonymous(
                 name: "",
                 email: ""));
+            ZDKZendesk.Instance.SetIdentity(new ZDKObjCJwt(""));
             ZDKSupportUI.InitializeWithZendesk(ZDKZendesk.Instance);
         }
 
