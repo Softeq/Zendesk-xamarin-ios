@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Softeq.ZendeskSupportProvidersSDK.iOS</id>
-        <version>5.1.1</version>
+        <version>5.5.0</version>
         <authors>Softeq Development Corp.</authors>
         <owners>Softeq Development Corp.</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -13,12 +13,12 @@
         <iconUrl>https://avatars.githubusercontent.com/u/11525</iconUrl>
         <licenseUrl>https://github.com/Softeq/Zendesk-xamarin-ios/blob/master/LICENSE</licenseUrl>
         <projectUrl>https://github.com/Softeq/Zendesk-xamarin-ios</projectUrl>
-        <copyright>Copyright 2021 Softeq Development Corp.</copyright>
+        <copyright>Copyright 2022 Softeq Development Corp.</copyright>
         <tags>zendesk, xamarin.ios, softeq, ios, support</tags>
         <dependencies>
-            <!-- Podspec: https://github.com/CocoaPods/Specs/blob/master/Specs/d/b/2/ZendeskSupportProvidersSDK/5.1.1/ZendeskSupportProvidersSDK.podspec.json#L25-L28 -->
+            <!-- Podspec: https://github.com/CocoaPods/Specs/blob/master/Specs/d/b/2/ZendeskSupportProvidersSDK/5.5.0/ZendeskSupportProvidersSDK.podspec.json -->
             <group targetFramework="Xamarin.iOS10">
-                <dependency id="Softeq.ZendeskCoreSDK.iOS" version="2.4.1" />
+                <dependency id="Softeq.ZendeskCoreSDK.iOS" version="2.7.0" />
             </group>
         </dependencies>
     </metadata>

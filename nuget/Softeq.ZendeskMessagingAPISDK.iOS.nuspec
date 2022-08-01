@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Softeq.ZendeskMessagingAPISDK.iOS</id>
-        <version>3.8.0</version>
+        <version>3.8.5</version>
         <authors>Softeq Development Corp.</authors>
         <owners>Softeq Development Corp.</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -13,12 +13,12 @@
         <iconUrl>https://avatars.githubusercontent.com/u/11525</iconUrl>
         <licenseUrl>https://github.com/Softeq/Zendesk-xamarin-ios/blob/master/LICENSE</licenseUrl>
         <projectUrl>https://github.com/Softeq/Zendesk-xamarin-ios</projectUrl>
-        <copyright>Copyright 2021 Softeq Development Corp.</copyright>
+        <copyright>Copyright 2022 Softeq Development Corp.</copyright>
         <tags>zendesk, xamarin.ios, softeq, ios, messaging</tags>
         <dependencies>
-            <!-- Podspec: https://github.com/CocoaPods/Specs/blob/master/Specs/2/d/5/ZendeskMessagingAPISDK/3.8.0/ZendeskMessagingAPISDK.podspec.json#L26-L28 -->
+            <!-- Podspec: https://github.com/CocoaPods/Specs/blob/master/Specs/2/d/5/ZendeskMessagingAPISDK/3.8.5/ZendeskMessagingAPISDK.podspec.json#L26-L28 -->
             <group targetFramework="Xamarin.iOS10">
-                <dependency id="Softeq.ZendeskSDKConfigurationsSDK.iOS" version="1.1.6" />
+                <dependency id="Softeq.ZendeskSDKConfigurationsSDK.iOS" version="1.1.11" />
             </group>
         </dependencies>
     </metadata>

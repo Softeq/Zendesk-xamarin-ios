@@ -1389,36 +1389,36 @@ namespace SupportProvidersSDK.Bindings
 		void DeleteUpload(string uploadToken, ZDKDeleteUploadCallback callback);
 	}
 
-	// @interface ZDKRequestWithAttachmentsUtil : NSObject
-	[BaseType(typeof(NSObject))]
-	interface ZDKRequestWithAttachmentsUtil
-	{
-		// -(void)uploadAttachment:(NSData *)data withFilename:(NSString *)filename callback:(ZDKUploadCallback)callback;
-		[Export("uploadAttachment:withFilename:callback:")]
-		void UploadAttachment(NSData data, string filename, ZDKUploadCallback callback);
+	//// @interface ZDKRequestWithAttachmentsUtil : NSObject
+	//[BaseType(typeof(NSObject))]
+	//interface ZDKRequestWithAttachmentsUtil
+	//{
+	//	// -(void)uploadAttachment:(NSData *)data withFilename:(NSString *)filename callback:(ZDKUploadCallback)callback;
+	//	[Export("uploadAttachment:withFilename:callback:")]
+	//	void UploadAttachment(NSData data, string filename, ZDKUploadCallback callback);
 
-		// -(void)uploadAttachment:(NSData *)data withFilename:(NSString *)filename andContentType:(NSString *)contentType callback:(ZDKUploadCallback)callback;
-		[Export("uploadAttachment:withFilename:andContentType:callback:")]
-		void UploadAttachment(NSData data, string filename, string contentType, ZDKUploadCallback callback);
+	//	// -(void)uploadAttachment:(NSData *)data withFilename:(NSString *)filename andContentType:(NSString *)contentType callback:(ZDKUploadCallback)callback;
+	//	[Export("uploadAttachment:withFilename:andContentType:callback:")]
+	//	void UploadAttachment(NSData data, string filename, string contentType, ZDKUploadCallback callback);
 
-		// -(void)createRequest:(ZDKRequest *)request withTags:(NSArray *)tags andCallback:(ZDKCreateRequestCallback)callback;
-		[Export("createRequest:withTags:andCallback:")]
-		//[Verify (StronglyTypedNSArray)]
-		void CreateRequest(ZDKRequest request, NSObject[] tags, ZDKCreateRequestCallback callback);
+	//	// -(void)createRequest:(ZDKRequest *)request withTags:(NSArray *)tags andCallback:(ZDKCreateRequestCallback)callback;
+	//	[Export("createRequest:withTags:andCallback:")]
+	//	//[Verify (StronglyTypedNSArray)]
+	//	void CreateRequest(ZDKRequest request, NSObject[] tags, ZDKCreateRequestCallback callback);
 
-		// -(void)addComment:(ZDKComment *)comment forRequestId:(NSString *)requestId withCallback:(ZDKRequestAddCommentCallback)callback;
-		[Export("addComment:forRequestId:withCallback:")]
-		void AddComment(ZDKComment comment, string requestId, ZDKRequestAddCommentCallback callback);
+	//	// -(void)addComment:(ZDKComment *)comment forRequestId:(NSString *)requestId withCallback:(ZDKRequestAddCommentCallback)callback;
+	//	[Export("addComment:forRequestId:withCallback:")]
+	//	void AddComment(ZDKComment comment, string requestId, ZDKRequestAddCommentCallback callback);
 
-		// -(void)deleteFilename:(NSString *)filename;
-		[Export("deleteFilename:")]
-		void DeleteFilename(string filename);
+	//	// -(void)deleteFilename:(NSString *)filename;
+	//	[Export("deleteFilename:")]
+	//	void DeleteFilename(string filename);
 
-		// +(NSString *)MIMETypeForData:(NSData *)data;
-		[Static]
-		[Export("MIMETypeForData:")]
-		string MIMETypeForData(NSData data);
-	}
+	//	// +(NSString *)MIMETypeForData:(NSData *)data;
+	//	[Static]
+	//	[Export("MIMETypeForData:")]
+	//	string MIMETypeForData(NSData data);
+	//}
 
 	// @interface ZDKRequestsResponse : NSObject
 	[BaseType(typeof(NSObject))]
