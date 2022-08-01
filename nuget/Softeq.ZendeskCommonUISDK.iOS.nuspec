@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Softeq.ZendeskCommonUISDK.iOS</id>
-        <version>6.0.0</version>
+        <version>6.1.4</version>
         <authors>Softeq Development Corp.</authors>
         <owners>Softeq Development Corp.</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -13,7 +13,7 @@
         <iconUrl>https://avatars.githubusercontent.com/u/11525</iconUrl>
         <licenseUrl>https://github.com/Softeq/Zendesk-xamarin-ios/blob/master/LICENSE</licenseUrl>
         <projectUrl>https://github.com/Softeq/Zendesk-xamarin-ios</projectUrl>
-        <copyright>Copyright 2021 Softeq Development Corp.</copyright>
+        <copyright>Copyright 2022 Softeq Development Corp.</copyright>
         <tags>zendesk, xamarin.ios, softeq, ios</tags>
         <dependencies>
             <group targetFramework="Xamarin.iOS10" />
