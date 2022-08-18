@@ -15,6 +15,9 @@ for zipFile in *.zip; do
 	lipo -create -output ${frameworkName} iphone simulator
 	rm iphone
 	rm simulator
+	cd Modules/${frameworkName}.swiftmodule
+	cp -n ../../../${xcframework}/ios-arm64_i386_x86_64-simulator/${framework}/Modules/${frameworkName}.swiftmodule/* .
+	cd ../..
 	echo "processed $(pwd)"
 	cd ..
 	rm -rf ${xcframework}
