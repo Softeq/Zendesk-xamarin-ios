@@ -17,5 +17,5 @@ for zipFile in *.zip; do
 	rm simulator
 	echo "processed $(pwd)"
 	cd ..
-	#rm -rf ${xcframework}
+	rm -rf ${xcframework}
 done
