@@ -46,7 +46,8 @@
   <ItemGroup>
     <NativeReference Include="SupportProvidersSDK.framework">
       <Kind>Framework</Kind>
-      <Frameworks>Foundation</Frameworks>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
     </NativeReference>
   </ItemGroup>
   <ItemGroup>

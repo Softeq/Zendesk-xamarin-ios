@@ -2,6 +2,10 @@
 using UIKit;
 using ZendeskCoreSDK.Bindings;
 using SupportSDK.Bindings;
+using ChatProvidersSDK.Bindings;
+using MessagingSDK.Bindings;
+using SupportProvidersSDK.Bindings;
+using System;
 
 namespace SampleApp
 {
@@ -23,16 +27,11 @@ namespace SampleApp
 
         private void InitZendesk()
         {
-            // TODO: Add valid credentials:
-            ZDKZendesk.InitializeWithAppId(
-                appId: "",
-                clientId: "",
-                zendeskUrl: "");
-            ZDKZendesk.Instance.SetIdentity(new ZDKObjCAnonymous(
-                name: "",
-                email: ""));
-            ZDKZendesk.Instance.SetIdentity(new ZDKObjCJwt(""));
-            ZDKSupportUI.InitializeWithZendesk(ZDKZendesk.Instance);
+            ZDKChatLogger.IsEnabled = true;
+            ZDKChatLogger.DefaultLevel = ZDKChatLogLevel.Warning;
+            ZDKChat.InitializeWithAccountKey("youraccountkey", CoreFoundation.DispatchQueue.MainQueue);
+            // use this to check jwt user auth
+            // ZDKChat.Instance.SetIdentityWithAuthenticator(new CustomAuthenticator());
         }
 
         // UISceneSession Lifecycle
