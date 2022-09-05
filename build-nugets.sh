@@ -6,7 +6,7 @@ for line in $(cat azure-pipelines/nuget.yml); do
     if [[ ${line} =~ ${regex} ]]; then
         projectName=${BASH_REMATCH[1]}
         nugetName=${BASH_REMATCH[2]}
-        projectPath=src/${projectName}/${projectName}.csproj
+        projectPath=${projectName}/${projectName}.csproj
         msbuild ${projectPath} /p:Configuration=Release /t:Clean
         rc=$?; if [[ $rc != 0 ]]; then exit $rc; fi
         msbuild ${projectPath} /p:Configuration=Release /t:Restore
