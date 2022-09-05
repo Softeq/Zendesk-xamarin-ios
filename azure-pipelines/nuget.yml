@@ -19,6 +19,8 @@ parameters:
       - 'MessagingSDK.Bindings -> Softeq.ZendeskMessagingSDK.iOS'
       - 'SupportProvidersSDK.Bindings -> Softeq.ZendeskSupportProvidersSDK.iOS'
       - 'SupportSDK.Bindings -> Softeq.ZendeskSupportSDK.iOS'
+      - 'ChatProvidersSDK.Bindings -> Softeq.ZendeskChatProvidersSDK.iOS'
+      - 'ChatSDK.Bindigns -> Softeq.ZendeskChatSDK.iOS'
 
 jobs:
 - job: macOS
