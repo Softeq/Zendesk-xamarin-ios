@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Softeq.ZendeskMessagingSDK.iOS</id>
-        <version>3.8.5.2</version>
+        <version>3.8.5.3</version>
         <authors>Softeq Development Corp.</authors>
         <owners>Softeq Development Corp.</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -18,8 +18,9 @@
         <dependencies>
             <!-- Podspec: https://github.com/CocoaPods/Specs/blob/master/Specs/4/5/1/ZendeskMessagingSDK/3.8.5/ZendeskMessagingSDK.podspec.json -->
             <group targetFramework="Xamarin.iOS10">
-                <dependency id="Softeq.ZendeskCommonUISDK.iOS" version="6.1.4" />
-                <dependency id="Softeq.ZendeskMessagingAPISDK.iOS" version="3.8.5" />
+                <dependency id="Softeq.ZendeskCommonUISDK.iOS" version="6.1.4.3" />
+                <dependency id="Softeq.ZendeskMessagingAPISDK.iOS" version="3.8.5.3" />
+                <dependency id="Softeq.ZendeskSDKConfigurationsSDK.iOS" version="1.1.11.3" />
             </group>
         </dependencies>
     </metadata>

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Softeq.ZendeskSupportProvidersSDK.iOS</id>
-        <version>5.5.0.2</version>
+        <version>5.5.0.3</version>
         <authors>Softeq Development Corp.</authors>
         <owners>Softeq Development Corp.</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -18,7 +18,7 @@
         <dependencies>
             <!-- Podspec: https://github.com/CocoaPods/Specs/blob/master/Specs/d/b/2/ZendeskSupportProvidersSDK/5.5.0/ZendeskSupportProvidersSDK.podspec.json -->
             <group targetFramework="Xamarin.iOS10">
-                <dependency id="Softeq.ZendeskCoreSDK.iOS" version="2.7.0" />
+                <dependency id="Softeq.ZendeskCoreSDK.iOS" version="2.7.0.3" />
             </group>
         </dependencies>
     </metadata>
