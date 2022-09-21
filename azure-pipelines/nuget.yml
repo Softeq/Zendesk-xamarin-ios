@@ -1,6 +1,7 @@
 resources:
 - repo: self
 trigger: none
+pr: none
 
 variables:
 - template: templates/vars.yml
