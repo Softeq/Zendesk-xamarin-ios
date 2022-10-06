@@ -1,11 +1,8 @@
 ﻿using Foundation;
 using UIKit;
-using ZendeskCoreSDK.Bindings;
-using SupportSDK.Bindings;
 using ChatProvidersSDK.Bindings;
-using MessagingSDK.Bindings;
-using SupportProvidersSDK.Bindings;
-using System;
+using SupportSDK.Bindings;
+using ZendeskCoreSDK.Bindings;
 
 namespace SampleApp
 {
@@ -28,8 +25,30 @@ namespace SampleApp
         private void InitZendesk()
         {
             ZDKChatLogger.IsEnabled = true;
-            ZDKChatLogger.DefaultLevel = ZDKChatLogLevel.Warning;
-            ZDKChat.InitializeWithAccountKey("youraccountkey", CoreFoundation.DispatchQueue.MainQueue);
+            ZDKChatLogger.DefaultLevel = ZDKChatLogLevel.Verbose;
+
+            // TODO: Add valid credentials:
+            ZDKZendesk.InitializeWithAppId(
+                appId: "",
+                clientId: "",
+                zendeskUrl: "");
+
+            ZDKZendesk.Instance.SetIdentity(new ZDKObjCAnonymous(
+                name: "GitHubTestUser",
+                email: "test@github.com"));
+            // or JWT:
+            // ZDKZendesk.Instance.SetIdentity(new ZDKObjCJwt(""));
+
+            // Init Support
+            ZDKSupportUI.InitializeWithZendesk(ZDKZendesk.Instance);
+
+            // Init chat
+            // TODO: Add valid credentials:
+            ZDKChat.InitializeWithAccountKey(
+                accountKey: "",
+                appId: "",
+                CoreFoundation.DispatchQueue.MainQueue);
+
             // use this to check jwt user auth
             // ZDKChat.Instance.SetIdentityWithAuthenticator(new CustomAuthenticator());
         }
