@@ -16,12 +16,8 @@
         <copyright>Copyright 2022 Softeq Development Corp.</copyright>
         <tags>zendesk, xamarin.ios, softeq, ios, support</tags>
         <dependencies>
-            <group targetFramework="Xamarin.iOS10">
-                <dependency id="Softeq.ZendeskCommonUISDK.iOS" version="6.1.4.4" />
-                <dependency id="Softeq.ZendeskMessagingAPISDK.iOS" version="3.8.5.4" />
-                <dependency id="Softeq.ZendeskMessagingSDK.iOS" version="3.8.5.4" />
-                <dependency id="Softeq.ZendeskSDKConfigurationsSDK.iOS" version="1.1.11.4" />
-            </group>
+            <!-- Podspec: https://github.com/zendesk/chat_providers_sdk_ios/blob/2.12.0/ZendeskChatProvidersSDK.podspec -->
+            <group targetFramework="Xamarin.iOS10.0" />
         </dependencies>
     </metadata>
     <files>

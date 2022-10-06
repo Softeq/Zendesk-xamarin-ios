@@ -16,8 +16,8 @@
         <copyright>Copyright 2022 Softeq Development Corp.</copyright>
         <tags>zendesk, xamarin.ios, softeq, ios, messaging</tags>
         <dependencies>
-            <!-- Podspec: https://github.com/CocoaPods/Specs/blob/master/Specs/2/d/5/ZendeskMessagingAPISDK/3.8.5/ZendeskMessagingAPISDK.podspec.json#L26-L28 -->
-            <group targetFramework="Xamarin.iOS10">
+            <!-- Podspec: https://github.com/zendesk/messagingapi_sdk_ios/blob/3.8.5/ZendeskMessagingAPISDK.podspec -->
+            <group targetFramework="Xamarin.iOS10.0">
                 <dependency id="Softeq.ZendeskSDKConfigurationsSDK.iOS" version="1.1.11.4" />
             </group>
         </dependencies>

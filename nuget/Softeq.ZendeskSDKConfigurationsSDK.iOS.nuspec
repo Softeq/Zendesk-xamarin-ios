@@ -16,7 +16,8 @@
         <copyright>Copyright 2022 Softeq Development Corp.</copyright>
         <tags>zendesk, xamarin.ios, softeq, ios</tags>
         <dependencies>
-            <group targetFramework="Xamarin.iOS10" />
+            <!-- Podspec: https://github.com/zendesk/sdkconfigurations_sdk_ios/blob/1.1.11/ZendeskSDKConfigurationsSDK.podspec -->
+            <group targetFramework="Xamarin.iOS10.0" />
         </dependencies>
     </metadata>
     <files>
