@@ -13,6 +13,8 @@ Pod Name     |   Pod Version   |   NuGet
 [ZendeskMessagingSDK](https://cocoapods.org/pods/ZendeskMessagingSDK) | 3.8.5 | [![Softeq.ZendeskMessagingSDK.iOS](https://buildstats.info/nuget/Softeq.ZendeskMessagingSDK.iOS?includePreReleases=true)](https://www.nuget.org/packages/Softeq.ZendeskMessagingSDK.iOS) `Softeq.ZendeskMessagingSDK.iOS`
 [ZendeskSupportProvidersSDK](https://cocoapods.org/pods/ZendeskSupportProvidersSDK) | 5.5.0 | [![Softeq.ZendeskSupportProvidersSDK.iOS](https://buildstats.info/nuget/Softeq.ZendeskSupportProvidersSDK.iOS?includePreReleases=true)](https://www.nuget.org/packages/Softeq.ZendeskSupportProvidersSDK.iOS) `Softeq.ZendeskSupportProvidersSDK.iOS`
 [ZendeskSupportSDK](https://cocoapods.org/pods/ZendeskSupportSDK) | 5.5.0 | [![Softeq.ZendeskSupportSDK.iOS](https://buildstats.info/nuget/Softeq.ZendeskSupportSDK.iOS?includePreReleases=true)](https://www.nuget.org/packages/Softeq.ZendeskSupportSDK.iOS) `Softeq.ZendeskSupportSDK.iOS`
+[ZendeskChatProvidersSDK](https://cocoapods.org/pods/ZendeskChatProvidersSDK) | 2.12.0 | [![Softeq.ZendeskChatProvidersSDK.iOS](https://buildstats.info/nuget/Softeq.ZendeskChatProvidersSDK.iOS?includePreReleases=true)](https://www.nuget.org/packages/Softeq.ZendeskChatProvidersSDK.iOS) `Softeq.ZendeskChatProvidersSDK.iOS`
+[ZendeskChatSDK](https://cocoapods.org/pods/ZendeskChatSDK) | 2.12.0 | [![Softeq.ZendeskChatSDK.iOS](https://buildstats.info/nuget/Softeq.ZendeskChatSDK.iOS?includePreReleases=true)](https://www.nuget.org/packages/Softeq.ZendeskChatSDK.iOS) `Softeq.ZendeskChatSDK.iOS`
 
 ## Installation
 
@@ -34,6 +36,10 @@ Zendesk resources:
 - [Zendesk Support Providers SDK Demo](https://github.com/zendesk/ios_sdk_demo_apps/tree/master/SupportSDKSamples)
 
 ## Development
+
+### Bindings
+
+Use scripts from `libs/` to add/update bindings.
 
 ### NuGet
 
