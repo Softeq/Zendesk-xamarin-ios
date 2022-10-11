@@ -46,27 +46,33 @@
   <ItemGroup>
     <NativeReference Include="SupportSDK.framework">
       <Kind>Framework</Kind>
-      <Frameworks>Foundation</Frameworks>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
     </NativeReference>
     <NativeReference Include="..\MessagingSDK.Bindings\MessagingSDK.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
     </NativeReference>
     <NativeReference Include="..\CommonUISDK.Bindings\CommonUISDK.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
     </NativeReference>
     <NativeReference Include="..\MessagingAPI.Bindings\MessagingAPI.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
     </NativeReference>
     <NativeReference Include="..\SDKConfigurations.Bindings\SDKConfigurations.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
     </NativeReference>
     <NativeReference Include="..\SupportProvidersSDK.Bindings\SupportProvidersSDK.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
     </NativeReference>
   </ItemGroup>
   <ItemGroup>

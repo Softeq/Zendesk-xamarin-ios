@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Softeq.ZendeskChatProvidersSDK.iOS</id>
+        <version>2.12.0.4</version>
+        <authors>Softeq Development Corp.</authors>
+        <owners>Softeq Development Corp.</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <title>ZendeskChatProvidersSDK</title>
+        <summary>Xamarin.iOS binding library for Zendesk Chat Providers SDK</summary>
+        <description>Zendesk Chat Providers SDK for mobile. Use the Chat Providers SDK to build your own Chat UI with our API providers.</description>
+        <releaseNotes>New release</releaseNotes>
+        <iconUrl>https://avatars.githubusercontent.com/u/11525</iconUrl>
+        <licenseUrl>https://github.com/Softeq/Zendesk-xamarin-ios/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/Softeq/Zendesk-xamarin-ios</projectUrl>
+        <copyright>Copyright 2022 Softeq Development Corp.</copyright>
+        <tags>zendesk, xamarin.ios, softeq, ios, support</tags>
+        <dependencies>
+            <group targetFramework="Xamarin.iOS10">
+                <dependency id="Softeq.ZendeskCommonUISDK.iOS" version="6.1.4.4" />
+                <dependency id="Softeq.ZendeskMessagingAPISDK.iOS" version="3.8.5.4" />
+                <dependency id="Softeq.ZendeskMessagingSDK.iOS" version="3.8.5.4" />
+                <dependency id="Softeq.ZendeskSDKConfigurationsSDK.iOS" version="1.1.11.4" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="../ChatProvidersSDK.Bindings/bin/Release/ChatProvidersSDK.Bindings.dll" target="lib/Xamarin.iOS10/ChatProvidersSDK.Bindings.dll" />
+    </files>
+</package>

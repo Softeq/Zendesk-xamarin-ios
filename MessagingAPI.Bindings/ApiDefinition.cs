@@ -1,70 +1,55 @@
-﻿using System;
-
-using ObjCRuntime;
+using System;
 using Foundation;
-using UIKit;
+using ObjCRuntime;
 
 namespace MessagingAPI.Bindings
 {
-    [Static]
-	//[Verify(ConstantsInterfaceAssociation)]
-	partial interface Constants
-	{
-		// extern double MessagingAPIVersionNumber;
-		[Field("MessagingAPIVersionNumber", "__Internal")]
-		double MessagingAPIVersionNumber { get; }
+    // @interface ZDKObservationToken : NSObject
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface ZDKObservationToken
+    {
+        // -(void)cancel;
+        [Export("cancel")]
+        void Cancel();
 
-		//// extern const unsigned char [] MessagingAPIVersionString;
-		//[Field("MessagingAPIVersionString", "__Internal")]
-		//byte[] MessagingAPIVersionString { get; }
-	}
+        // -(BOOL)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
+        [Export("isEqual:")]
+        [Override]
+        bool IsEqual([NullAllowed] NSObject @object);
+    }
 
-	// @interface ZDKObservationToken : NSObject
-	[BaseType(typeof(NSObject))]
-	[DisableDefaultCtor]
-	interface ZDKObservationToken
-	{
-		// -(void)cancel;
-		[Export("cancel")]
-		void Cancel();
-	}
+    // @interface ZDKTransferOptionDescription : NSObject
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface ZDKTransferOptionDescription
+    {
+        // @property (readonly, copy, nonatomic) NSString * _Nonnull engineId;
+        [Export("engineId")]
+        string EngineId { get; }
 
-	// @interface ZDKTransferOptionDescription : NSObject
-	[BaseType(typeof(NSObject))]
-	[DisableDefaultCtor]
-	interface ZDKTransferOptionDescription
-	{
-		// @property (readonly, copy, nonatomic) NSString * _Nonnull engineId;
-		[Export("engineId")]
-		string EngineId { get; }
+        // @property (readonly, copy, nonatomic) NSString * _Nonnull displayName;
+        [Export("displayName")]
+        string DisplayName { get; }
 
-		// @property (readonly, copy, nonatomic) NSString * _Nonnull displayName;
-		[Export("displayName")]
-		string DisplayName { get; }
+        // -(instancetype _Nonnull)initWithEngineId:(NSString * _Nonnull)engineId displayName:(NSString * _Nonnull)displayName __attribute__((objc_designated_initializer));
+        [Export("initWithEngineId:displayName:")]
+        [DesignatedInitializer]
+        IntPtr Constructor(string engineId, string displayName);
 
-		// -(instancetype _Nonnull)initWithEngineId:(NSString * _Nonnull)engineId displayName:(NSString * _Nonnull)displayName __attribute__((objc_designated_initializer));
-		[Export("initWithEngineId:displayName:")]
-		[DesignatedInitializer]
-		IntPtr Constructor(string engineId, string displayName);
+        // -(BOOL)isEqual:(id _Nullable)object __attribute__((warn_unused_result("")));
+        [Export("isEqual:")]
+        [Override]
+        bool IsEqual([NullAllowed] NSObject @object);
+    }
 
-		// -(BOOL)isEqual:(id _Nullable)object __attribute__((warn_unused_result));
-		[Export("isEqual:")]
-		bool IsEqual([NullAllowed] NSObject @object);
-	}
+    [Protocol(Name = "_TtP12MessagingAPI9ZDKEngine_"), Model]
+    [BaseType(typeof(NSObject))]
+    interface ZDKEngine
+    {
+    }
 
-	// @protocol ZDKEngine
-	/*
-	  Check whether adding [Model] to this declaration is appropriate.
-	  [Model] is used to generate a C# class that implements this protocol,
-	  and might be useful for protocols that consumers are supposed to implement,
-	  since consumers can subclass the generated class instead of implementing
-	  the generated interface. If consumers are not supposed to implement this
-	  protocol, then [Model] is redundant and will generate code that will never
-	  be used.
-	*/
-	[Protocol(Name = "_TtP12MessagingAPI9ZDKEngine_")]
-	interface ZDKEngine
-	{
-	}
+    interface IZDKEngine
+    {
+    }
 }
-

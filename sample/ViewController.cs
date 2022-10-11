@@ -1,4 +1,10 @@
-﻿using Foundation;
+﻿using ChatProvidersSDK.Bindings;
+using ChatSDK.Bindings;
+using Foundation;
+using MessagingAPI.Bindings;
+using MessagingSDK.Bindings;
+using SDKConfigurations.Bindings;
+using SupportProvidersSDK.Bindings;
 using SupportSDK.Bindings;
 using System;
 using UIKit;
@@ -27,7 +33,22 @@ namespace SampleApp
         {
             base.ViewDidAppear(animated);
 
-            PresentModalViewController(ZDKHelpCenterUi.BuildHelpCenterOverviewUi, true);
+            ZDKChatEngine engine = ZDKChatEngine.EngineAndReturnError(out var engineError);
+            if (engineError != null)
+            {
+                throw new Exception("error during engine creation", new NSErrorException(engineError));
+            }
+
+            ZDKEngine[] engines = new ZDKEngine[] { engine };
+            ZDKConfiguration[] configs = new ZDKConfiguration[0];
+
+            var controller = ZDKMessaging.Instance.BuildUIWithEngines(engines, configs, out var controllerError);
+            if (controllerError != null)
+            {
+                throw new Exception("error during controller creation", new NSErrorException(controllerError));
+            }
+
+            PresentViewController(controller, false, null);
         }
     }
 }
