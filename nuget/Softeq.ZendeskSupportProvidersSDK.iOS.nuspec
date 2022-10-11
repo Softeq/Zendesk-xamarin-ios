@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Softeq.ZendeskSupportProvidersSDK.iOS</id>
-        <version>5.5.0.4</version>
+        <version>5.5.0.1</version>
         <authors>Softeq Development Corp.</authors>
         <owners>Softeq Development Corp.</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -10,19 +10,22 @@
         <summary>Xamarin.iOS binding library for Zendesk Support Providers SDK</summary>
         <description>Zendesk Support Providers SDK for Xamarin.iOS is a quick, convenient way to get customer support into your mobile apps. Build your own UI on top of our API providers and provide your end users with an easy way to get in touch from any mobile app.</description>
         <releaseNotes>New release</releaseNotes>
-        <iconUrl>https://avatars.githubusercontent.com/u/11525</iconUrl>
-        <licenseUrl>https://github.com/Softeq/Zendesk-xamarin-ios/blob/master/LICENSE</licenseUrl>
+        <license type="file">LICENSE.txt</license>
+        <icon>nuget-icon.png</icon>
         <projectUrl>https://github.com/Softeq/Zendesk-xamarin-ios</projectUrl>
         <copyright>Copyright 2022 Softeq Development Corp.</copyright>
         <tags>zendesk, xamarin.ios, softeq, ios, support</tags>
         <dependencies>
             <!-- Podspec: https://github.com/zendesk/support_providers_sdk_ios/blob/5.5.0/ZendeskSupportProvidersSDK.podspec -->
-            <group targetFramework="Xamarin.iOS10.0">
-                <dependency id="Softeq.ZendeskCoreSDK.iOS" version="2.7.0.4" />
+            <group targetFramework="Xamarin.iOS1.0">
+                <dependency id="Softeq.ZendeskCoreSDK.iOS" version="2.7.0.1" />
             </group>
         </dependencies>
     </metadata>
     <files>
-        <file src="../SupportProvidersSDK.Bindings/bin/Release/SupportProvidersSDK.Bindings.dll" target="lib/Xamarin.iOS10/SupportProvidersSDK.Bindings.dll" />
+        <file src="../LICENSE.txt" target="" />
+        <file src="../assets/nuget-icon.png" target="" />
+
+        <file src="../SupportProvidersSDK.Bindings/bin/Release/SupportProvidersSDK.Bindings.dll" target="lib/xamarinios10" />
     </files>
 </package>
