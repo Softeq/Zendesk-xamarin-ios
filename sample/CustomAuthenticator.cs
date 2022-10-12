@@ -1,7 +1,6 @@
 ﻿using System;
 using ChatProvidersSDK.Bindings;
 using Foundation;
-using ObjCRuntime;
 
 namespace SampleApp
 {
