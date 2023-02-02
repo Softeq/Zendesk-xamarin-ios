@@ -3,7 +3,7 @@
     <!-- Podspec: https://github.com/zendesk/sdkconfigurations_sdk_ios/blob/1.1.11/ZendeskSDKConfigurationsSDK.podspec -->
     <TargetFramework>net6.0-ios</TargetFramework>
     <IsBindingProject>true</IsBindingProject>
-    <SupportedOSPlatformVersion>10.2</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
     <ImplicitUsings>enable</ImplicitUsings>
 
     <!-- Assembly & NuGet Info -->
