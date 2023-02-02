@@ -1,48 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{8180DF9C-4973-4228-8B74-537C3C59AAA5}</ProjectGuid>
-    <TemplateGuid>{b6f3ff35-79b2-4f25-a2fc-60a7cf61013b}</TemplateGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>ChatProvidersSDK.Bindings</RootNamespace>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>ChatProvidersSDK.Bindings</AssemblyName>
-    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <!-- Podspec: https://github.com/zendesk/chat_providers_sdk_ios/blob/2.12.0/ZendeskChatProvidersSDK.podspec -->
+    <TargetFramework>net6.0-ios</TargetFramework>
+    <IsBindingProject>true</IsBindingProject>
+    <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Assembly & NuGet Info -->
+    <Title>Zendesk Chat Providers SDK</Title>
+    <Description>Zendesk Chat Providers SDK for mobile. Use the Chat Providers SDK to build your own Chat UI with our API providers.</Description>
+    <Company>Softeq Development Corporation</Company>
+    <Copyright>Copyright © 2023 Softeq Development Corporation</Copyright>
+    <Version>2.12.0.1</Version>
+    <Authors>Softeq Development Corp.</Authors>
+    <Owners>Softeq Development Corp.</Owners>
+    <PackageId>Softeq.ZendeskChatProvidersSDK.iOS</PackageId>
+    <PackageIcon>nuget-icon.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/Softeq/Zendesk-xamarin-ios</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageTags>zendesk;ios;xamarin;binding;softeq;library;chat</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Migration to .NET6</PackageReleaseNotes>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="Xamarin.iOS" />
+    <None Include="../LICENSE.txt" Visible="False" Pack="true" PackagePath="" />
+    <None Include="../README.md" Visible="False" Pack="true" PackagePath="" />
+    <None Include="../images/nuget-icon.png" Pack="True" PackagePath="" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
+
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <ObjcBindingCoreSource Include="Structs.cs" />
   </ItemGroup>
+
   <ItemGroup>
     <NativeReference Include="ChatProvidersSDK.framework">
       <Kind>Framework</Kind>
@@ -50,23 +41,12 @@
       <ForceLoad>True</ForceLoad>
     </NativeReference>
   </ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\CommonUISDK.Bindings\CommonUISDK.Bindings.csproj">
-      <Project>{516bef0b-0272-4f85-9d4c-e9edcb2a490c}</Project>
-      <Name>CommonUISDK.Bindings</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MessagingAPI.Bindings\MessagingAPI.Bindings.csproj">
-      <Project>{5cc82010-bda0-4bd1-8c61-ab36d213efb2}</Project>
-      <Name>MessagingAPI.Bindings</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MessagingSDK.Bindings\MessagingSDK.Bindings.csproj">
-      <Project>{d130b9fc-2060-400f-a317-666d6780005a}</Project>
-      <Name>MessagingSDK.Bindings</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SDKConfigurations.Bindings\SDKConfigurations.Bindings.csproj">
-      <Project>{92f289e4-78e9-4b46-afa6-8e8dc7f675b8}</Project>
-      <Name>SDKConfigurations.Bindings</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\CommonUISDK.Bindings\CommonUISDK.Bindings.csproj" />
+    <ProjectReference Include="..\MessagingAPI.Bindings\MessagingAPI.Bindings.csproj" />
+    <ProjectReference Include="..\MessagingSDK.Bindings\MessagingSDK.Bindings.csproj" />
+    <ProjectReference Include="..\SDKConfigurations.Bindings\SDKConfigurations.Bindings.csproj" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+
 </Project>
