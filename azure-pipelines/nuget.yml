@@ -50,12 +50,6 @@ jobs:
       version: $(XCODE_VERSION)
 
   - task: Bash@3
-    displayName: Restore NuGets
-    inputs:
-      targetType: 'inline'
-      script: |
-        dotnet restore
-  - task: Bash@3
     displayName: Pack Library
     inputs:
       targetType: 'inline'
