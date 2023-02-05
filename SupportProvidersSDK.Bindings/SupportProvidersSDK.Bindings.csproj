@@ -11,7 +11,7 @@
     <Description>Zendesk Support Providers SDK for Xamarin.iOS is a quick, convenient way to get customer support into your mobile apps. Build your own UI on top of our API providers and provide your end users with an easy way to get in touch from any mobile app.</Description>
     <Company>Softeq Development Corporation</Company>
     <Copyright>Copyright © 2023 Softeq Development Corporation</Copyright>
-    <Version>5.5.0.1</Version>
+    <Version>5.5.0.2</Version>
     <Authors>Softeq Development Corp.</Authors>
     <Owners>Softeq Development Corp.</Owners>
     <PackageId>Softeq.ZendeskSupportProvidersSDK.iOS</PackageId>

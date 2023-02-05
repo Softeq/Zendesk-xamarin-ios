@@ -11,7 +11,7 @@
     <Description>Zendesk CommonUI SDK for Xamarin.iOS. The CommonUI SDK is a shared library among the Zendesk product SDKs. It is used to shared core UI components among our product SDKs.</Description>
     <Company>Softeq Development Corporation</Company>
     <Copyright>Copyright © 2023 Softeq Development Corporation</Copyright>
-    <Version>6.1.4.1</Version>
+    <Version>6.1.4.2</Version>
     <Authors>Softeq Development Corp.</Authors>
     <Owners>Softeq Development Corp.</Owners>
     <PackageId>Softeq.ZendeskCommonUISDK.iOS</PackageId>

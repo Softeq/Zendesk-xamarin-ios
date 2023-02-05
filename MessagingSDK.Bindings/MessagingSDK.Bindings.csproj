@@ -11,7 +11,7 @@
     <Description>Zendesk Messaging SDK for Xamarin.iOS. The Messaging SDK is a shared library among the Zendesk product SDKs. It is used to share the Messaging UI components among our product SDKs.</Description>
     <Company>Softeq Development Corporation</Company>
     <Copyright>Copyright © 2023 Softeq Development Corporation</Copyright>
-    <Version>3.8.5.1</Version>
+    <Version>3.8.5.2</Version>
     <Authors>Softeq Development Corp.</Authors>
     <Owners>Softeq Development Corp.</Owners>
     <PackageId>Softeq.ZendeskMessagingSDK.iOS</PackageId>

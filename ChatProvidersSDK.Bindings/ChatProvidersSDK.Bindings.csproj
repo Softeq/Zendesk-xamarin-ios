@@ -11,7 +11,7 @@
     <Description>Zendesk Chat Providers SDK for mobile. Use the Chat Providers SDK to build your own Chat UI with our API providers.</Description>
     <Company>Softeq Development Corporation</Company>
     <Copyright>Copyright © 2023 Softeq Development Corporation</Copyright>
-    <Version>2.12.0.1</Version>
+    <Version>2.12.0.2</Version>
     <Authors>Softeq Development Corp.</Authors>
     <Owners>Softeq Development Corp.</Owners>
     <PackageId>Softeq.ZendeskChatProvidersSDK.iOS</PackageId>
