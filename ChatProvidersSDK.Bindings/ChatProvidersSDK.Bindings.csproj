@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <!-- Podspec: https://github.com/zendesk/chat_providers_sdk_ios/blob/2.12.0/ZendeskChatProvidersSDK.podspec -->
-    <TargetFramework>net6.0-ios</TargetFramework>
+    <TargetFramework>net6.0-ios15.2</TargetFramework>
     <IsBindingProject>true</IsBindingProject>
     <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
     <ImplicitUsings>enable</ImplicitUsings>

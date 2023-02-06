@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <!-- Podspec: https://github.com/zendesk/sdkconfigurations_sdk_ios/blob/1.1.11/ZendeskSDKConfigurationsSDK.podspec -->
-    <TargetFramework>net6.0-ios</TargetFramework>
+    <TargetFramework>net6.0-ios15.2</TargetFramework>
     <IsBindingProject>true</IsBindingProject>
     <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
     <ImplicitUsings>enable</ImplicitUsings>
