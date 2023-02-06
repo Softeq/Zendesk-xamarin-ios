@@ -1,45 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{516BEF0B-0272-4F85-9D4C-E9EDCB2A490C}</ProjectGuid>
-    <TemplateGuid>{b6f3ff35-79b2-4f25-a2fc-60a7cf61013b}</TemplateGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>CommonUISDK.Bindings</RootNamespace>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>CommonUISDK.Bindings</AssemblyName>
-    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <!-- Podspec: https://github.com/zendesk/commonui_sdk_ios/blob/6.1.4/ZendeskCommonUISDK.podspec -->
+    <TargetFramework>net6.0-ios15.2</TargetFramework>
+    <IsBindingProject>true</IsBindingProject>
+    <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Assembly & NuGet Info -->
+    <Title>Zendesk CommonUI SDK</Title>
+    <Description>Zendesk CommonUI SDK for Xamarin.iOS. The CommonUI SDK is a shared library among the Zendesk product SDKs. It is used to shared core UI components among our product SDKs.</Description>
+    <Company>Softeq Development Corporation</Company>
+    <Copyright>Copyright © 2023 Softeq Development Corporation</Copyright>
+    <Version>6.1.4.2</Version>
+    <Authors>Softeq Development Corp.</Authors>
+    <Owners>Softeq Development Corp.</Owners>
+    <PackageId>Softeq.ZendeskCommonUISDK.iOS</PackageId>
+    <PackageIcon>nuget-icon.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/Softeq/Zendesk-xamarin-ios</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageTags>zendesk;ios;xamarin;binding;softeq;library</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Migration to .NET6</PackageReleaseNotes>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="Xamarin.iOS" />
+    <None Include="../LICENSE.txt" Visible="False" Pack="true" PackagePath="" />
+    <None Include="../README.md" Visible="False" Pack="true" PackagePath="" />
+    <None Include="../images/nuget-icon.png" Pack="True" PackagePath="" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
+
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
   </ItemGroup>
+
   <ItemGroup>
     <NativeReference Include="CommonUISDK.framework">
       <Kind>Framework</Kind>
@@ -47,11 +40,9 @@
       <ForceLoad>True</ForceLoad>
     </NativeReference>
   </ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\SDKConfigurations.Bindings\SDKConfigurations.Bindings.csproj">
-      <Project>{92f289e4-78e9-4b46-afa6-8e8dc7f675b8}</Project>
-      <Name>SDKConfigurations.Bindings</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\SDKConfigurations.Bindings\SDKConfigurations.Bindings.csproj" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+
 </Project>

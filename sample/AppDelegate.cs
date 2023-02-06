@@ -27,7 +27,7 @@ namespace SampleApp
             ZDKChatLogger.IsEnabled = true;
             ZDKChatLogger.DefaultLevel = ZDKChatLogLevel.Verbose;
 
-            // TODO: Add valid credentials:
+            // TODO: Add valid credentials: https://<zendeskUrl>/admin/channels/classic/mobile_sdk
             ZDKZendesk.InitializeWithAppId(
                 appId: "",
                 clientId: "",

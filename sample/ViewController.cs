@@ -21,18 +21,30 @@ namespace SampleApp
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
+
+            var openSupportBtn = new UIButton(UIButtonType.System);
+            openSupportBtn.TranslatesAutoresizingMaskIntoConstraints = false;
+            openSupportBtn.SetTitle("Open Support", UIControlState.Normal);
+            openSupportBtn.TouchUpInside += OnOpenSupport;
+
+            var openChatBtn = new UIButton(UIButtonType.System);
+            openChatBtn.TranslatesAutoresizingMaskIntoConstraints = false;
+            openChatBtn.SetTitle("Open Chat", UIControlState.Normal);
+            openChatBtn.TouchUpInside += OnOpenChat;
+
+            View!.AddSubview(openSupportBtn);
+            View!.AddSubview(openChatBtn);
+
+            NSLayoutConstraint.ActivateConstraints(new[] {
+                openSupportBtn.TopAnchor.ConstraintEqualTo(View.TopAnchor, 50),
+                openSupportBtn.CenterXAnchor.ConstraintEqualTo(View.CenterXAnchor),
+                openChatBtn.TopAnchor.ConstraintEqualTo(openSupportBtn.BottomAnchor, 20),
+                openChatBtn.CenterXAnchor.ConstraintEqualTo(View.CenterXAnchor),
+            });
         }
 
-        public override void DidReceiveMemoryWarning()
+        private void OnOpenSupport(object? sender, EventArgs e)
         {
-            base.DidReceiveMemoryWarning();
-            // Release any cached data, images, etc that aren't in use.
-        }
-
-        public override void ViewDidAppear(bool animated)
-        {
-            base.ViewDidAppear(animated);
-
             // SUPPORT
             // https://developer.zendesk.com/documentation/classic-web-widget-sdks/support-sdk/ios/help_center/
 
@@ -41,16 +53,17 @@ namespace SampleApp
                 Tags = new[] { "Create Request" },
                 Subject = "Test from create request",
             };
-            UIViewController requestScreen = ZDKRequestUi.BuildRequestUiWith(new NSObject[]{ config });
+            UIViewController requestScreen = ZDKRequestUi.BuildRequestUiWith(new NSObject[] { config });
 
             // UIViewController requestList = ZDKRequestUi.BuildRequestUiWith(new NSObject[]{});
-            UIViewController helpCenter = ZDKHelpCenterUi.BuildHelpCenterOverviewUiWithConfigs(new ZDKConfiguration[]{});
+            UIViewController helpCenter = ZDKHelpCenterUi.BuildHelpCenterOverviewUiWithConfigs(new ZDKConfiguration[] { });
             // UIViewController helpCenter = ZDKHelpCenterUi.BuildHelpCenterOverviewUi();
 
             PresentModalViewController(helpCenter, true);
+        }
 
-
-
+        private void OnOpenChat(object? sender, EventArgs e)
+        {
             // CHAT
             // https://developer.zendesk.com/documentation/classic-web-widget-sdks/chat-sdk-v2/ios/getting-started/
 
@@ -77,6 +90,17 @@ namespace SampleApp
             }
 
             PresentModalViewController(chat, false);
+        }
+
+        public override void DidReceiveMemoryWarning()
+        {
+            base.DidReceiveMemoryWarning();
+            // Release any cached data, images, etc that aren't in use.
+        }
+
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
         }
     }
 }
