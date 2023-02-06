@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- Podspec: https://github.com/zendesk/chat_providers_sdk_ios/blob/2.12.0/ZendeskChatProvidersSDK.podspec -->
+    <TargetFramework>net6.0-ios15.2</TargetFramework>
+    <IsBindingProject>true</IsBindingProject>
+    <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Assembly & NuGet Info -->
+    <Title>Zendesk Chat Providers SDK</Title>
+    <Description>Zendesk Chat Providers SDK for mobile. Use the Chat Providers SDK to build your own Chat UI with our API providers.</Description>
+    <Company>Softeq Development Corporation</Company>
+    <Copyright>Copyright © 2023 Softeq Development Corporation</Copyright>
+    <Version>2.12.0.2</Version>
+    <Authors>Softeq Development Corp.</Authors>
+    <Owners>Softeq Development Corp.</Owners>
+    <PackageId>Softeq.ZendeskChatProvidersSDK.iOS</PackageId>
+    <PackageIcon>nuget-icon.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/Softeq/Zendesk-xamarin-ios</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageTags>zendesk;ios;xamarin;binding;softeq;library;chat</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Migration to .NET6</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../LICENSE.txt" Visible="False" Pack="true" PackagePath="" />
+    <None Include="../README.md" Visible="False" Pack="true" PackagePath="" />
+    <None Include="../images/nuget-icon.png" Pack="True" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+    <ObjcBindingCoreSource Include="Structs.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeReference Include="ChatProvidersSDK.framework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonUISDK.Bindings\CommonUISDK.Bindings.csproj" />
+    <ProjectReference Include="..\MessagingAPI.Bindings\MessagingAPI.Bindings.csproj" />
+    <ProjectReference Include="..\MessagingSDK.Bindings\MessagingSDK.Bindings.csproj" />
+    <ProjectReference Include="..\SDKConfigurations.Bindings\SDKConfigurations.Bindings.csproj" />
+  </ItemGroup>
+
+</Project>

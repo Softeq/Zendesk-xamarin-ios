@@ -1,7 +1,8 @@
 ﻿using Foundation;
 using UIKit;
-using ZendeskCoreSDK.Bindings;
+using ChatProvidersSDK.Bindings;
 using SupportSDK.Bindings;
+using ZendeskCoreSDK.Bindings;
 
 namespace SampleApp
 {
@@ -23,16 +24,33 @@ namespace SampleApp
 
         private void InitZendesk()
         {
-            // TODO: Add valid credentials:
+            ZDKChatLogger.IsEnabled = true;
+            ZDKChatLogger.DefaultLevel = ZDKChatLogLevel.Verbose;
+
+            // TODO: Add valid credentials: https://<zendeskUrl>/admin/channels/classic/mobile_sdk
             ZDKZendesk.InitializeWithAppId(
                 appId: "",
                 clientId: "",
                 zendeskUrl: "");
+
             ZDKZendesk.Instance.SetIdentity(new ZDKObjCAnonymous(
-                name: "",
-                email: ""));
-            ZDKZendesk.Instance.SetIdentity(new ZDKObjCJwt(""));
+                name: "GitHubTestUser",
+                email: "test@github.com"));
+            // or JWT:
+            // ZDKZendesk.Instance.SetIdentity(new ZDKObjCJwt(""));
+
+            // Init Support
             ZDKSupportUI.InitializeWithZendesk(ZDKZendesk.Instance);
+
+            // Init chat
+            // TODO: Add valid credentials:
+            ZDKChat.InitializeWithAccountKey(
+                accountKey: "",
+                appId: "",
+                CoreFoundation.DispatchQueue.MainQueue);
+
+            // use this to check jwt user auth
+            // ZDKChat.Instance.SetIdentityWithAuthenticator(new CustomAuthenticator());
         }
 
         // UISceneSession Lifecycle

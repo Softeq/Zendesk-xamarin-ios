@@ -1,11 +1,10 @@
-﻿using ObjCRuntime;
+using ObjCRuntime;
 
 namespace SDKConfigurations.Bindings
 {
     [Native]
-	public enum ConfigurationError : long
-	{
-		ConfigurationErrorNoConfig = 0
-	}
+    public enum ConfigurationError : long
+    {
+        ConfigurationErrorNoConfig = 0
+    }
 }
-

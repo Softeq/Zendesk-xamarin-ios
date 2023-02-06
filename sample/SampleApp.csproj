@@ -1,164 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-        <ProjectGuid>{7FB8203A-D9ED-4873-992A-C44BA0A9F8CA}</ProjectGuid>
-        <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-        <TemplateGuid>{edc1b0fa-90cd-4038-8fad-98fe74adb368}</TemplateGuid>
-        <OutputType>Exe</OutputType>
-        <RootNamespace>SampleApp</RootNamespace>
-        <AssemblyName>SampleApp</AssemblyName>
-        <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-        <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
-        <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-        <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-        <DefineConstants>DEBUG</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <MtouchArch>x86_64</MtouchArch>
-        <MtouchLink>None</MtouchLink>
-        <MtouchDebug>true</MtouchDebug>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
-        <DebugType>none</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <MtouchLink>None</MtouchLink>
-        <MtouchArch>x86_64</MtouchArch>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\iPhone\Debug</OutputPath>
-        <DefineConstants>DEBUG</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <MtouchArch>ARM64</MtouchArch>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <CodesignKey>iPhone Developer</CodesignKey>
-        <MtouchDebug>true</MtouchDebug>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-        <DebugType>none</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\iPhone\Release</OutputPath>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <MtouchArch>ARM64</MtouchArch>
-        <CodesignKey>iPhone Developer</CodesignKey>
-    </PropertyGroup>
-    <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-        <Reference Include="System.Core" />
-        <Reference Include="Xamarin.iOS" />
-        <Reference Include="System.Numerics" />
-        <Reference Include="System.Numerics.Vectors" />
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-ios16.2</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <SupportedOSPlatformVersion>13.2</SupportedOSPlatformVersion>
+    <Platforms>iPhone;iPhoneSimulator</Platforms>
+    <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <CreatePackage>false</CreatePackage>
+    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <CreatePackage>false</CreatePackage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <CreatePackage>false</CreatePackage>
+    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <CreatePackage>false</CreatePackage>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Update="*.storyboard" />
+    <ImageAsset Update="Assets.xcassets\Contents.json">
+      <Link>Assets.xcassets\Contents.json</Link>
+    </ImageAsset>
+    <ImageAsset Update="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Link>Assets.xcassets\AppIcon.appiconset\Contents.json</Link>
+    </ImageAsset>
+  </ItemGroup>
+
+  <ItemGroup>
+      <ProjectReference Include="..\ZendeskCoreSDK.Bindings\ZendeskCoreSDK.Bindings.csproj" />
+      <ProjectReference Include="..\SupportSDK.Bindings\SupportSDK.Bindings.csproj" />
+      <ProjectReference Include="..\SupportProvidersSDK.Bindings\SupportProvidersSDK.Bindings.csproj" />
+      <ProjectReference Include="..\SDKConfigurations.Bindings\SDKConfigurations.Bindings.csproj" />
+      <ProjectReference Include="..\MessagingSDK.Bindings\MessagingSDK.Bindings.csproj" />
+      <ProjectReference Include="..\MessagingAPI.Bindings\MessagingAPI.Bindings.csproj" />
+      <ProjectReference Include="..\CommonUISDK.Bindings\CommonUISDK.Bindings.csproj" />
+      <ProjectReference Include="..\ChatProvidersSDK.Bindings\ChatProvidersSDK.Bindings.csproj" />
+      <ProjectReference Include="..\ChatSDK.Bindings\ChatSDK.Bindings.csproj" />
     </ItemGroup>
-    <ItemGroup>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-    </ItemGroup>
-    <ItemGroup>
-        <Folder Include="Resources\" />
-    </ItemGroup>
-    <ItemGroup>
-        <InterfaceDefinition Include="LaunchScreen.storyboard" />
-        <InterfaceDefinition Include="Main.storyboard" />
-    </ItemGroup>
-    <ItemGroup>
-        <None Include="Info.plist" />
-        <None Include="Entitlements.plist" />
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="Main.cs" />
-        <Compile Include="AppDelegate.cs" />
-        <Compile Include="SceneDelegate.cs" />
-        <Compile Include="ViewController.cs" />
-        <Compile Include="ViewController.designer.cs">
-            <DependentUpon>ViewController.cs</DependentUpon>
-        </Compile>
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\ZendeskCoreSDK.Bindings\ZendeskCoreSDK.Bindings.csproj">
-        <Project>{4551C234-0BA6-4E16-A74D-2F32CC9F91D2}</Project>
-        <Name>ZendeskCoreSDK.Bindings</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\SupportSDK.Bindings\SupportSDK.Bindings.csproj">
-        <Project>{2C185FA3-0E06-496E-BEB4-BF854F79A785}</Project>
-        <Name>SupportSDK.Bindings</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\SupportProvidersSDK.Bindings\SupportProvidersSDK.Bindings.csproj">
-        <Project>{FA2A342D-920F-4FF2-A935-8D70E48D1A32}</Project>
-        <Name>SupportProvidersSDK.Bindings</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\SDKConfigurations.Bindings\SDKConfigurations.Bindings.csproj">
-        <Project>{92F289E4-78E9-4B46-AFA6-8E8DC7F675B8}</Project>
-        <Name>SDKConfigurations.Bindings</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\MessagingSDK.Bindings\MessagingSDK.Bindings.csproj">
-        <Project>{D130B9FC-2060-400F-A317-666D6780005A}</Project>
-        <Name>MessagingSDK.Bindings</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\MessagingAPI.Bindings\MessagingAPI.Bindings.csproj">
-        <Project>{5CC82010-BDA0-4BD1-8C61-AB36D213EFB2}</Project>
-        <Name>MessagingAPI.Bindings</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\CommonUISDK.Bindings\CommonUISDK.Bindings.csproj">
-        <Project>{516BEF0B-0272-4F85-9D4C-E9EDCB2A490C}</Project>
-        <Name>CommonUISDK.Bindings</Name>
-      </ProjectReference>
-    </ItemGroup>
-    <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -1,161 +1,160 @@
-﻿using System;
-
-using ObjCRuntime;
+using System;
+using CommonUISDK;
+using CoreGraphics;
 using Foundation;
+using ObjCRuntime;
 using UIKit;
 
 namespace CommonUISDK.Bindings
 {
-    [Static]
-	//[Verify(ConstantsInterfaceAssociation)]
-	partial interface Constants
-	{
-		// extern double CommonUISDKVersionNumber;
-		[Field("CommonUISDKVersionNumber", "__Internal")]
-		double CommonUISDKVersionNumber { get; }
+    // @interface ActionOptionView : UIButton
+    [BaseType(typeof(UIButton), Name = "_TtC11CommonUISDK16ActionOptionView")]
+    interface ActionOptionView
+    {
+    }
 
-		// extern const unsigned char [] CommonUISDKVersionString;
-		//[Field("CommonUISDKVersionString", "__Internal")]
-		//byte[] CommonUISDKVersionString { get; }
-	}
+    // @interface ActionOptionsTableViewCell : UITableViewCell
+    [BaseType(typeof(UITableViewCell), Name = "_TtC11CommonUISDK26ActionOptionsTableViewCell")]
+    interface ActionOptionsTableViewCell
+    {
+        // -(void)awakeFromNib __attribute__((objc_requires_super));
+        [Export("awakeFromNib")]
+        [RequiresSuper]
+        [Override]
+        void AwakeFromNib();
 
-	// @interface ActionOptionView : UIView
-	[BaseType(typeof(UIView), Name = "_TtC11CommonUISDK16ActionOptionView")]
-	interface ActionOptionView
-	{
-	}
+        // -(BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender __attribute__((warn_unused_result("")));
+        [Export("canPerformAction:withSender:")]
+        bool CanPerformAction(Selector action, [NullAllowed] NSObject sender);
 
-	// @interface ActionOptionsTableViewCell : UITableViewCell
-	[BaseType(typeof(UITableViewCell), Name = "_TtC11CommonUISDK26ActionOptionsTableViewCell")]
-	interface ActionOptionsTableViewCell
-	{
-		// -(void)awakeFromNib __attribute__((objc_requires_super));
-		[Export("awakeFromNib")]
-		[RequiresSuper]
-		void AwakeFromNib();
+        // @property (readonly, nonatomic) BOOL canBecomeFirstResponder;
+        [Export("canBecomeFirstResponder")]
+        [Override]
+        bool CanBecomeFirstResponder { get; }
 
-		// -(void)prepareForReuse __attribute__((objc_requires_super));
-		[Export("prepareForReuse")]
-		[RequiresSuper]
-		void PrepareForReuse();
+        // -(void)prepareForReuse __attribute__((objc_requires_super));
+        [Export("prepareForReuse")]
+        [RequiresSuper]
+        [Override]
+        void PrepareForReuse();
 
-		// -(BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender __attribute__((warn_unused_result));
-		[Export("canPerformAction:withSender:")]
-		bool CanPerformAction(Selector action, [NullAllowed] NSObject sender);
+        // -(void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
+        [Export("traitCollectionDidChange:")]
+        [Override]
+        void TraitCollectionDidChange([NullAllowed] UITraitCollection previousTraitCollection);
+    }
 
-		// @property (readonly, nonatomic) BOOL canBecomeFirstResponder;
-		[Export("canBecomeFirstResponder")]
-		bool CanBecomeFirstResponder { get; }
-	}
+    // @interface AlignedCollectionViewFlowLayout : UICollectionViewFlowLayout
+    [BaseType(typeof(UICollectionViewFlowLayout), Name = "_TtC11CommonUISDK31AlignedCollectionViewFlowLayout")]
+    [DisableDefaultCtor]
+    interface AlignedCollectionViewFlowLayout
+    {
+        //		// -(instancetype _Nullable)initWithCoder:(NSCoder * _Nonnull)aDecoder __attribute__((objc_designated_initializer));
+        //		[Export ("initWithCoder:")]
+        //		[DesignatedInitializer]
+        //		IntPtr Constructor (NSCoder aDecoder);
 
-	// @interface ArticlesTableViewCell : UITableViewCell
-	[BaseType(typeof(UITableViewCell), Name = "_TtC11CommonUISDK21ArticlesTableViewCell")]
-	interface ArticlesTableViewCell
-	{
-		// -(void)awakeFromNib __attribute__((objc_requires_super));
-		[Export("awakeFromNib")]
-		[RequiresSuper]
-		void AwakeFromNib();
+        // -(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds __attribute__((warn_unused_result("")));
+        [Export("shouldInvalidateLayoutForBoundsChange:")]
+        [Override]
+        bool ShouldInvalidateLayoutForBoundsChange(CGRect newBounds);
 
-		// -(void)prepareForReuse __attribute__((objc_requires_super));
-		[Export("prepareForReuse")]
-		[RequiresSuper]
-		void PrepareForReuse();
+        // -(UICollectionViewLayoutAttributes * _Nullable)layoutAttributesForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath __attribute__((warn_unused_result("")));
+        [Export("layoutAttributesForItemAtIndexPath:")]
+        [return: NullAllowed]
+        UICollectionViewLayoutAttributes LayoutAttributesForItemAtIndexPath(NSIndexPath indexPath);
 
-		// -(BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender __attribute__((warn_unused_result));
-		[Export("canPerformAction:withSender:")]
-		bool CanPerformAction(Selector action, [NullAllowed] NSObject sender);
+        // -(NSArray<UICollectionViewLayoutAttributes *> * _Nullable)layoutAttributesForElementsInRect:(CGRect)rect __attribute__((warn_unused_result("")));
+        [Export("layoutAttributesForElementsInRect:")]
+        [Override]
+        UICollectionViewLayoutAttributes[] LayoutAttributesForElementsInRect(CGRect rect);
+    }
 
-		// @property (readonly, nonatomic) BOOL canBecomeFirstResponder;
-		[Export("canBecomeFirstResponder")]
-		bool CanBecomeFirstResponder { get; }
-	}
+    // @interface ArticlesTableViewCell : UITableViewCell
+    [BaseType(typeof(UITableViewCell), Name = "_TtC11CommonUISDK21ArticlesTableViewCell")]
+    interface ArticlesTableViewCell
+    {
+        // -(void)awakeFromNib __attribute__((objc_requires_super));
+        [Export("awakeFromNib")]
+        [RequiresSuper]
+        [Override]
+        void AwakeFromNib();
 
-	// @interface ZDKCommonTheme : NSObject
-	[BaseType(typeof(NSObject))]
-	[DisableDefaultCtor]
-	interface ZDKCommonTheme
-	{
-		// @property (readonly, nonatomic, strong, class) ZDKCommonTheme * _Nonnull currentTheme;
-		[Static]
-		[Export("currentTheme", ArgumentSemantic.Strong)]
-		ZDKCommonTheme CurrentTheme { get; }
+        // -(void)prepareForReuse __attribute__((objc_requires_super));
+        [Export("prepareForReuse")]
+        [RequiresSuper]
+        [Override]
+        void PrepareForReuse();
 
-		// @property (nonatomic, strong) UIColor * _Nonnull primaryColor;
-		[Export("primaryColor", ArgumentSemantic.Strong)]
-		UIColor PrimaryColor { get; set; }
-	}
+        // -(BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender __attribute__((warn_unused_result("")));
+        [Export("canPerformAction:withSender:")]
+        bool CanPerformAction(Selector action, [NullAllowed] NSObject sender);
 
-	// @interface InputField : UIView
-	[BaseType(typeof(UIView), Name = "_TtC11CommonUISDK10InputField")]
-	interface InputField
-	{
-		//// -(instancetype _Nullable)initWithCoder:(NSCoder * _Nonnull)aDecoder __attribute__((objc_designated_initializer));
-		//[Export("initWithCoder:")]
-		//[DesignatedInitializer]
-		//IntPtr Constructor(NSCoder aDecoder);
+        // @property (readonly, nonatomic) BOOL canBecomeFirstResponder;
+        [Export("canBecomeFirstResponder")]
+        [Override]
+        bool CanBecomeFirstResponder { get; }
 
-		// -(void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
-		[Export("traitCollectionDidChange:")]
-		void TraitCollectionDidChange([NullAllowed] UITraitCollection previousTraitCollection);
-	}
+        // -(void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
+        [Export("traitCollectionDidChange:")]
+        [Override]
+        void TraitCollectionDidChange([NullAllowed] UITraitCollection previousTraitCollection);
+    }
 
-	//// @interface CommonUISDK_Swift_991 (InputField) <UITextViewDelegate>
-	//[Category]
-	//[BaseType(typeof(InputField))]
-	//interface InputField_CommonUISDK_Swift_991 : IUITextViewDelegate
-	//{
-	//	// -(void)textViewDidChange:(UITextView * _Nonnull)textView;
-	//	[Export("textViewDidChange:")]
-	//	void TextViewDidChange(UITextView textView);
+    // @interface ZDKCommonTheme : NSObject
+    [BaseType(typeof(NSObject))]
+    interface ZDKCommonTheme
+    {
+        // @property (nonatomic, strong, class) ZDKCommonTheme * _Nonnull currentTheme;
+        [Static]
+        [Export("currentTheme", ArgumentSemantic.Strong)]
+        ZDKCommonTheme CurrentTheme { get; set; }
 
-	//	// -(void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
-	//	[Export("textViewDidBeginEditing:")]
-	//	void TextViewDidBeginEditing(UITextView textView);
-	//}
+        // @property (nonatomic, strong) UIColor * _Nonnull primaryColor;
+        [Export("primaryColor", ArgumentSemantic.Strong)]
+        UIColor PrimaryColor { get; set; }
+    }
 
-	// @interface ResponseOptionsTableViewCell : UITableViewCell
-	[BaseType(typeof(UITableViewCell), Name = "_TtC11CommonUISDK28ResponseOptionsTableViewCell")]
-	interface ResponseOptionsTableViewCell
-	{
-	}
+    // @interface InputField : UIView
+    [BaseType(typeof(UIView), Name = "_TtC11CommonUISDK10InputField")]
+    interface InputField
+    {
+        //		// -(instancetype _Nullable)initWithCoder:(NSCoder * _Nonnull)aDecoder __attribute__((objc_designated_initializer));
+        //		[Export ("initWithCoder:")]
+        //		[DesignatedInitializer]
+        //		IntPtr Constructor (NSCoder aDecoder);
 
-	// @interface ResponseOptionsView : UIView
-	[BaseType(typeof(UIView), Name = "_TtC11CommonUISDK19ResponseOptionsView")]
-	interface ResponseOptionsView
-	{
-	}
+        // -(void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
+        [Export("traitCollectionDidChange:")]
+        [Override]
+        void TraitCollectionDidChange([NullAllowed] UITraitCollection previousTraitCollection);
 
-	//// @interface CommonUISDK_Swift_1021 (ResponseOptionsView) <UICollectionViewDataSource, UICollectionViewDelegate>
-	//[Category]
-	//[BaseType(typeof(ResponseOptionsView))]
-	//interface ResponseOptionsView_CommonUISDK_Swift_1021 : IUICollectionViewDataSource, IUICollectionViewDelegate
-	//{
-	//	// -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView __attribute__((warn_unused_result));
-	//	[Export("numberOfSectionsInCollectionView:")]
-	//	nint NumberOfSectionsInCollectionView(UICollectionView collectionView);
+        // -(void)textViewDidChange:(UITextView * _Nonnull)textView;
+        [Export("textViewDidChange:")]
+        void TextViewDidChange(UITextView textView);
 
-	//	// -(NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section __attribute__((warn_unused_result));
-	//	[Export("collectionView:numberOfItemsInSection:")]
-	//	nint CollectionView(UICollectionView collectionView, nint section);
+        // -(void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
+        [Export("textViewDidBeginEditing:")]
+        void TextViewDidBeginEditing(UITextView textView);
+    }
 
-	//	// -(UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath __attribute__((warn_unused_result));
-	//	[Export("collectionView:cellForItemAtIndexPath:")]
-	//	UICollectionViewCell CollectionView(UICollectionView collectionView, NSIndexPath indexPath);
+    // @interface TypingIndicatorTableViewCell : UITableViewCell
+    [BaseType(typeof(UITableViewCell), Name = "_TtC11CommonUISDK28TypingIndicatorTableViewCell")]
+    interface TypingIndicatorTableViewCell
+    {
+        // -(void)awakeFromNib __attribute__((objc_requires_super));
+        [Export("awakeFromNib")]
+        [RequiresSuper]
+        [Override]
+        void AwakeFromNib();
+    }
 
-	//	// -(void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-	//	[Export("collectionView:didSelectItemAtIndexPath:")]
-	//	void CollectionView(UICollectionView collectionView, NSIndexPath indexPath);
-	//}
-
-	// @interface TypingIndicatorTableViewCell : UITableViewCell
-	[BaseType(typeof(UITableViewCell), Name = "_TtC11CommonUISDK28TypingIndicatorTableViewCell")]
-	interface TypingIndicatorTableViewCell
-	{
-		// -(void)awakeFromNib __attribute__((objc_requires_super));
-		[Export("awakeFromNib")]
-		[RequiresSuper]
-		void AwakeFromNib();
-	}
+    // @interface CommonUISDK_Swift_334 (UIImageView)
+    [BaseType(typeof(UIImageView))]
+    interface UIImageViewExtension
+    {
+        // -(void)nuke_displayWithImage:(UIImage * _Nullable)image;
+        [Export("nuke_displayWithImage:")]
+        void Nuke_displayWithImage([NullAllowed] UIImage image);
+    }
 }
-

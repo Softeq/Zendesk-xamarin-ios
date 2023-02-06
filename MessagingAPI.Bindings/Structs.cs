@@ -1,6 +1,11 @@
-﻿//using System;
+using ObjCRuntime;
 
-//namespace NativeLibrary
-//{
-//}
-
+namespace MessagingAPI.Bindings
+{
+    [Native]
+    public enum ZDKApplicationEvent : long
+    {
+        WillEnterForeground = 0,
+        DidEnterBackground = 1
+    }
+}

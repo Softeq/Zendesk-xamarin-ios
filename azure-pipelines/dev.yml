@@ -1,12 +1,15 @@
-resources:
-- repo: self
 trigger:
+  batch: true
   branches:
     include:
-      - '*'
+      - master
+      - release/*
   paths:
+    include:
+      - '*'
     exclude:
       - '**/*.md'
+# pr: by default runs on each commit (with autoCancel) for all branches
 
 variables:
 - template: templates/vars.yml
@@ -15,15 +18,18 @@ jobs:
 - job: macOS
   pool:
     vmImage: $(MACOS_VM_IMAGE)
-
   steps:
-  - bash: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(MONO_VERSION)
-    displayName: 'Switch to the latest Xamarin SDK'
-  - task: XamariniOS@2
-    displayName: 'Build Xamarin.iOS solution **/*.sln'
-    inputs:
-      solutionFile: '../**/*.sln'
-      configuration: 'Debug'
-      packageApp: false
-      buildForSimulator: true
-      runNugetRestore: true
+    - template: templates/setup-dotnet.yml
+      parameters:
+        version: $(DOTNET_SDK_VERSION)
+
+    - template: templates/setup-xcode.yml
+      parameters:
+        version: $(XCODE_VERSION)
+
+    - task: Bash@3
+      displayName: Build iOS App
+      inputs:
+        targetType: 'inline'
+        script: |
+          dotnet build -c Debug -v Detailed

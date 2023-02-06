@@ -1,5 +1,4 @@
 variables:
-  MONO_VERSION: 6_12_7
-  XCODE_VERSION: 12.4
-  BuildConfiguration: 'Release'
-  MACOS_VM_IMAGE: 'macOS-latest'
+  DOTNET_SDK_VERSION: 6.0.405
+  XCODE_VERSION: 14.2
+  MACOS_VM_IMAGE: 'macos-12'
