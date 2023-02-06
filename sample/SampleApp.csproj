@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0-ios16.1</TargetFramework>
+    <TargetFramework>net6.0-ios16.2</TargetFramework>
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
     <SupportedOSPlatformVersion>13.2</SupportedOSPlatformVersion>
