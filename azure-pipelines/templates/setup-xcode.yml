@@ -1,7 +1,7 @@
 parameters:
 - name: version
   type: string
-  default: 14.2
+  default: 15.2
 
 steps:
 - task: Bash@3

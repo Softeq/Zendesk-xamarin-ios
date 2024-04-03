@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <!-- Podspec: https://github.com/zendesk/commonui_sdk_ios/blob/6.1.4/ZendeskCommonUISDK.podspec -->
-    <TargetFramework>net6.0-ios15.2</TargetFramework>
+    <TargetFramework>net8.0-ios17.2</TargetFramework>
     <IsBindingProject>true</IsBindingProject>
     <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -11,7 +11,7 @@
     <Description>Zendesk CommonUI SDK for Xamarin.iOS. The CommonUI SDK is a shared library among the Zendesk product SDKs. It is used to shared core UI components among our product SDKs.</Description>
     <Company>Softeq Development Corporation</Company>
     <Copyright>Copyright © 2023 Softeq Development Corporation</Copyright>
-    <Version>6.1.4.2</Version>
+    <Version>6.1.4.3</Version>
     <Authors>Softeq Development Corp.</Authors>
     <Owners>Softeq Development Corp.</Owners>
     <PackageId>Softeq.ZendeskCommonUISDK.iOS</PackageId>
@@ -20,7 +20,7 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageTags>zendesk;ios;xamarin;binding;softeq;library</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>Migration to .NET6</PackageReleaseNotes>
+    <PackageReleaseNotes>Migration to .NET8</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
