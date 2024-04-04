@@ -150,6 +150,7 @@ namespace CommonUISDK.Bindings
     }
 
     // @interface CommonUISDK_Swift_334 (UIImageView)
+    [Protocol]
     [BaseType(typeof(UIImageView))]
     interface UIImageViewExtension
     {
